@@ -1,0 +1,27 @@
+# Headers to include with each request.
+header:
+  - 'X-BugBounty: HackerOne-vavkamil'
+  - 'User-Agent: Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0 HackerOne-vavkamil'
+
+# Findings to exclude
+severity: critical,high,medium,low
+
+# Templates to scan
+templates:
+  - cves/
+  - takeovers/
+  - misconfiguration/
+  - default-logins/
+  - fuzzing/
+  - vulnerabilities/
+  - exposures/
+  - file/
+  - exposed-panels/
+  - technologies/
+  - miscellaneous/
+  - network/
+
+# Rate limit configuration for scan
+rate-limit: 120
+bulk-size: 50
+concurrency: 50
