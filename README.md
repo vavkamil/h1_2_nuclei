@@ -30,6 +30,7 @@ Scan any HackerOne program with Nuclei
 [i] Number of live targets: 6
 
 [i] Scannign targets with Nuclei
+[i] Output saved to: targets/security/nuclei_security_21-08-24.txt
 
 [i] Vulnerabilities found: 0
 ```
