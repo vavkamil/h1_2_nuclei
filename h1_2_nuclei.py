@@ -119,7 +119,7 @@ def nuclei_scan(input_file):
 
     num_findings = sum(1 for line in open(output_file))
 
-    return num_findings
+    return output_file, num_findings
 
 
 def main():
@@ -166,9 +166,11 @@ def main():
 
     print(f"[i] Number of live targets: {lines_httpx}\n")
 
-    print(f"[i] Scannign targets with Nuclei\n")
+    print(f"[i] Scannign targets with Nuclei")
 
-    nuclei_findings = nuclei_scan(output_httpx)
+    (output_nuclei, nuclei_findings) = nuclei_scan(output_httpx)
+
+    print(f"[i] Output saved to: {output_nuclei}\n")
 
     print(f"[i] Vulnerabilities found: {nuclei_findings}\n")
 
