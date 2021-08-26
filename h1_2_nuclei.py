@@ -166,7 +166,7 @@ def main():
 
     print(f"[i] Number of live targets: {lines_httpx}\n")
 
-    print(f"[i] Scannign targets with Nuclei")
+    print(f"[i] Scanning targets with Nuclei")
 
     (output_nuclei, nuclei_findings) = nuclei_scan(output_httpx)
 
