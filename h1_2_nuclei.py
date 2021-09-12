@@ -3,6 +3,7 @@
 import os
 import json
 import pathlib
+import argparse
 import requests
 import subprocess
 from datetime import datetime
@@ -10,7 +11,26 @@ from datetime import datetime
 h1_username = "vavkamil"
 h1_api_token = os.environ.get("HACKERONE_TOKEN")
 
-handle = "security"
+
+def banner():
+    banner = "\n"
+    banner += "                       _            _                       \n"
+    banner += " |_|  _.  _ |   _  ._ / \ ._   _     )   |\ |      _ |  _  o\n"
+    banner += " | | (_| (_ |< (/_ |  \_/ | | (/_   /_   | \| |_| (_ | (/_ |\n"
+
+    return banner
+
+
+def parse_args():
+    parser = argparse.ArgumentParser(
+        description="xx",
+        epilog="Have a nice day :)",
+    )
+    parser.add_argument(
+        "-handle", dest="handle", help="Private program handle", required=True
+    )
+
+    return parser.parse_args()
 
 
 def check_scope(handle):
@@ -122,9 +142,8 @@ def nuclei_scan(input_file):
     return output_file, num_findings
 
 
-def main():
-    print("[ HackerOne 2 Nuclei ]\n")
-
+def main(args):
+    handle = args.handle
     print(f"[i] Checking scope for: {handle}")
 
     json_scope = check_scope(handle)
@@ -176,4 +195,6 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    print(banner())
+    args = parse_args()
+    main(args)
