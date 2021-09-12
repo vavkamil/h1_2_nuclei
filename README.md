@@ -3,8 +3,9 @@ Scan any HackerOne program with Nuclei
 
 ## Example
 
-```
-[ HackerOne 2 Nuclei ]
+```             _            _                       
+ |_|  _.  _ |   _  ._ / \ ._   _     )   |\ |      _ |  _  o
+ | | (_| (_ |< (/_ |  \_/ | | (/_   /_   | \| |_| (_ | (/_ |
 
 [i] Checking scope for: security
 [i] Parsing scope items
