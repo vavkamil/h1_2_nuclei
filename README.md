@@ -1,9 +1,30 @@
 # h1_2_nuclei
+
 Scan any HackerOne program with Nuclei
+
+## Usage
+
+```
+$ python3 h1_2_nuclei.py -h
+                       _            _                       
+ |_|  _.  _ |   _  ._ / \ ._   _     )   |\ |      _ |  _  o
+ | | (_| (_ |< (/_ |  \_/ | | (/_   /_   | \| |_| (_ | (/_ |
+
+usage: h1_2_nuclei.py [-h] -handle HANDLE
+
+xx
+
+optional arguments:
+  -h, --help      show this help message and exit
+  -handle HANDLE  Private program handle
+
+Have a nice day :)
+```
 
 ## Example
 
 ```
+$ python3 h1_2_nuclei.py -handle security
                        _            _                       
  |_|  _.  _ |   _  ._ / \ ._   _     )   |\ |      _ |  _  o
  | | (_| (_ |< (/_ |  \_/ | | (/_   /_   | \| |_| (_ | (/_ |
