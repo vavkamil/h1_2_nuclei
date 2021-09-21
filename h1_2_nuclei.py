@@ -46,7 +46,10 @@ def check_scope(handle):
     )
 
     json_obj = res.json()
-    json_scope = json_obj["relationships"]["structured_scopes"]["data"]
+    try:
+        json_scope = json_obj["relationships"]["structured_scopes"]["data"]
+    except:
+        json_scope = 0
 
     return json_scope
 
@@ -147,6 +150,8 @@ def main(args):
     print(f"[i] Checking scope for: {handle}")
 
     json_scope = check_scope(handle)
+    if not (json_scope):
+        exit("[i] No domains in scope\n")
 
     print("[i] Parsing scope items\n")
 
